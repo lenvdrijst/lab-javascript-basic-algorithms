@@ -122,6 +122,12 @@ console.log(foundEt);
 // It works, but it feels a bit abundant...
 
 
+/*
+BONUS 2
+Create a new variable phraseToCheck and have it contain some string value. Write a code that will check if the value 
+we assigned to this variable is a Palindrome.
+*/
+
 let phraseToCheck = "A man, a plan, a canal, Panama!";
 let phraseNoSpace = "";
 let phraseReversed = "";
@@ -139,9 +145,11 @@ for (let i = phraseToCheck.length -1; i >= 0; i--) {
       continue;
     } else {
       phraseReversed += phraseToCheck[i].toLowerCase();
-
-      if (phraseNoSpace === phraseReversed) {
-        console.log("Wow how cool, it's a palindrome!");
-      } 
     }
   }
+
+if (phraseNoSpace === phraseReversed) {
+    console.log("Wow how cool, it's a palindrome!");
+ } else {
+    console.log("This phrase is not a palindrome.");
+}
