@@ -67,15 +67,23 @@ console.log(`"${reverseNavigatorName}"`)
 - What?! You both have the same name?
 */
 
-let alphabeticOrder = hacker1.localeCompare(hacker2);
-
-if (alphabeticOrder < 0) {
-  console.log("The driver's name goes first.")
-} else if (alphabeticOrder > 0) {
-  console.log("Yo, the navigator goes first definitely."); 
-} else {
-  console.log("What?! You both have the same name?")
+for (let char of hacker1) {
+    let alphabeticOrder = hacker1.localeCompare(hacker2);
+    
+    if (alphabeticOrder < 0) {
+      console.log("The driver's name goes first.")
+      break;
+    } else if (alphabeticOrder > 0) {
+      console.log("Yo, the navigator goes first definitely."); 
+      break;
+    } else if (alphabeticOrder === 0) {
+      console.log("What?! You both have the same name?")
+      break;
+    } else {
+      console.log("Something went wrong")
+    }
 }
+  
 
 /*
 BONUS 1
